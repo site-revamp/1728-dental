@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087F8C">
+  <meta name="description" content="Affordable dental care, close to home. Visit 1728 Dental Practice in Ang Mo Kio, Jurong East or Tampines East for dental implants, wisdom tooth removal, Invisalign and general dental care.">
+  <meta name="robots" content="index, follow">
+  <title>1728 Dental Practice | Affordable Dental Care in Singapore</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #087F8C;
+      --primary-dark: #066873;
+      --navy: #173B4D;
+      --ink: #20343D;
+      --muted: #61747C;
+      --surface: #F2F7F7;
+      --white: #FFFFFF;
+      --border: #DCE5E7;
+      --highlight: #F2B66D;
+      --radius: 20px;
+      --shadow: 0 18px 50px rgba(23,59,77,.10);
+      --font-heading: "Manrope", sans-serif;
+      --font-body: "DM Sans", sans-serif;
+      --container: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; width: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible, a:focus-visible, input:focus-visible,
+    select:focus-visible, textarea:focus-visible {
+      outline: 3px solid var(--highlight);
+      outline-offset: 3px;
+    }
+    .container { width: min(var(--container), calc(100% - 48px)); margin: auto; }
+    .section { padding: 96px 0; }
+    .section-soft { background: var(--surface); }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--primary);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: currentColor;
+    }
+    h1, h2, h3, h4 {
+      margin: 0;
+      color: var(--navy);
+      font-family: var(--font-heading);
+      line-height: 1.15;
+      letter-spacing: -.035em;
+    }
+    h1 { font-size: clamp(40px, 5.6vw, 68px); }
+    h2 { font-size: clamp(32px, 4vw, 46px); }
+    h3 { font-size: 23px; }
+    p { margin: 0; color: var(--muted); }
+    .section-heading { max-width: 690px; margin-bottom: 42px; }
+    .section-heading h2 { margin: 13px 0 15px; }
+    .section-heading p { max-width: 620px; font-size: 17px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 13px 23px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--primary);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 800;
+      transition: .2s ease;
+      cursor: pointer;
+    }
+    .btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    .btn-outline {
+      color: var(--navy);
+      background: transparent;
+      border-color: var(--border);
+    }
+    .btn-outline:hover { color: var(--primary-dark); background: var(--surface); }
+    .btn-white { color: var(--navy); background: var(--white); }
+    .btn-white:hover { color: var(--white); background: var(--navy); }
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary-dark);
+      font-weight: 800;
+    }
+    .text-link:hover { text-decoration: underline; }
+    .arrow { font-size: 19px; }
+
+    /* Announcement and header */
+    .topbar { background: var(--navy); color: white; font-size: 14px; }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 40px;
+    }
+    .topbar p { color: rgba(255,255,255,.88); }
+    .topbar a { color: white; font-weight: 700; }
+    .header {
+      position: sticky;
+      z-index: 100;
+      top: 0;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid rgba(220,229,231,.8);
+      backdrop-filter: blur(14px);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 82px;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      color: var(--navy);
+      font-family: var(--font-heading);
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -.07em;
+    }
+    .brand span { color: var(--primary); }
+    .brand small {
+      margin-top: 6px;
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 27px; }
+    .nav-links a {
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .nav-actions .btn { min-height: 46px; padding: 10px 18px; }
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: white;
+      color: var(--navy);
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 68px 0 76px;
+      background: linear-gradient(110deg, #F2F7F7 0%, #FFFFFF 64%);
+    }
+    .hero::after {
+      position: absolute;
+      top: -190px;
+      right: -160px;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(8,127,140,.12);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.03fr .97fr;
+      align-items: center;
+      gap: 55px;
+    }
+    .hero-copy { max-width: 590px; }
+    .hero-copy h1 { margin: 17px 0 22px; }
+    .hero-copy h1 span { color: var(--primary); }
+    .hero-copy > p { max-width: 510px; font-size: 18px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-top: 27px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .check-mark {
+      display: grid;
+      flex: 0 0 25px;
+      width: 25px;
+      height: 25px;
+      place-items: center;
+      border-radius: 50%;
+      background: #DCEEEF;
+      color: var(--primary-dark);
+      font-weight: 900;
+    }
+    .hero-visual { position: relative; min-width: 0; }
+    .hero-image {
+      height: 510px;
+      border-radius: 32px 32px 110px 32px;
+      box-shadow: var(--shadow);
+    }
+    .hero-floating {
+      position: absolute;
+      right: -20px;
+      bottom: 27px;
+      max-width: 245px;
+      padding: 19px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+    .hero-floating strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--navy);
+      font-family: var(--font-heading);
+      font-size: 19px;
+    }
+    .hero-floating p { font-size: 15px; line-height: 1.5; }
+
+    /* Quick trust strip */
+    .trust-strip { border-bottom: 1px solid var(--border); background: white; }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 24px 0;
+    }
+    .trust-item { display: flex; align-items: center; justify-content: center; gap: 13px; }
+    .trust-icon {
+      display: grid;
+      flex: 0 0 43px;
+      width: 43px;
+      height: 43px;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--surface);
+      color: var(--primary);
+    }
+    .trust-icon svg { width: 22px; height: 22px; }
+    .trust-item strong { display: block; color: var(--navy); font-size: 15px; }
+    .trust-item span { display: block; color: var(--muted); font-size: 14px; }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 23px;
+    }
+    .service-card {
+      display: grid;
+      grid-template-columns: 155px 1fr;
+      min-height: 210px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: white;
+      transition: .25s ease;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .service-card img { height: 100%; min-height: 210px; }
+    .service-content { display: flex; flex-direction: column; align-items: flex-start; padding: 24px; }
+    .service-content h3 { margin: 5px 0 9px; }
+    .service-content p { margin-bottom: 16px; font-size: 15px; }
+    .service-content .text-link { margin-top: auto; font-size: 15px; }
+
+    /* Six custom SVG icons */
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .approach-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: white;
+    }
+    .approach-icon {
+      display: grid;
+      width: 57px;
+      height: 57px;
+      margin-bottom: 20px;
+      place-items: center;
+      border-radius: 17px;
+      background: #E4F1F1;
+      color: var(--primary-dark);
+    }
+    .approach-icon svg { width: 30px; height: 30px; }
+    .approach-card h3 { margin-bottom: 10px; }
+    .approach-card p { font-size: 15px; }
+
+    /* Feature section */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      align-items: center;
+      gap: 70px;
+    }
+    .feature-image {
+      height: 470px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+    .feature-copy h2 { margin: 13px 0 18px; }
+    .feature-copy > p { font-size: 17px; }
+    .feature-list { display: grid; gap: 16px; margin: 27px 0 30px; }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--ink);
+      list-style: none;
+      font-weight: 600;
+    }
+    .feature-list { padding: 0; }
+    .feature-list .check-mark { margin-top: 1px; }
+
+    /* Price feature */
+    .price-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      border-radius: 28px;
+      background: var(--navy);
+      color: white;
+    }
+    .price-copy { padding: 48px; }
+    .price-copy .eyebrow { color: #8AD0D2; }
+    .price-copy h2 { margin: 14px 0 16px; color: white; }
+    .price-copy p { color: rgba(255,255,255,.76); }
+    .price-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 35px; background: #204C5B; }
+    .price-card { padding: 22px; border: 1px solid rgba(255,255,255,.2); border-radius: 17px; }
+    .price-card span { display: block; color: rgba(255,255,255,.75); font-size: 15px; }
+    .price-card strong { display: block; margin: 10px 0; color: white; font-family: var(--font-heading); font-size: 30px; }
+    .price-card small { color: rgba(255,255,255,.7); font-size: 14px; }
+    .price-disclaimer { margin-top: 17px; font-size: 14px; }
+
+    /* Clinics */
+    .clinic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .clinic-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: white;
+    }
+    .clinic-card img { height: 190px; }
+    .clinic-content { padding: 23px; }
+    .clinic-content h3 { margin-bottom: 10px; }
+    .clinic-content p { min-height: 72px; font-size: 15px; }
+    .clinic-phone { display: block; margin: 15px 0; color: var(--primary-dark); font-weight: 800; }
+    .clinic-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .clinic-actions .btn { min-height: 44px; padding: 9px 15px; font-size: 15px; }
+
+    /* Team */
+    .team-intro {
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      align-items: end;
+      gap: 40px;
+      margin-bottom: 38px;
+    }
+    .team-intro h2 { margin-top: 13px; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .team-card {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: white;
+    }
+    .team-avatar {
+      display: grid;
+      width: 66px;
+      height: 66px;
+      margin-bottom: 19px;
+      place-items: center;
+      border-radius: 50%;
+      background: #E4F1F1;
+      color: var(--primary-dark);
+      font-family: var(--font-heading);
+      font-size: 23px;
+      font-weight: 800;
+    }
+    .team-card h3 { margin-bottom: 6px; }
+    .team-card .role { display: block; margin-bottom: 12px; color: var(--primary-dark); font-size: 15px; font-weight: 800; }
+    .team-card p { font-size: 15px; }
+
+    /* Booking CTA */
+    .booking-banner {
+      position: relative;
+      overflow: hidden;
+      padding: 58px;
+      border-radius: 28px;
+      background: linear-gradient(115deg, var(--primary-dark), var(--primary));
+      color: white;
+    }
+    .booking-banner::after {
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 330px;
+      height: 330px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      content: "";
+    }
+    .booking-banner h2 { position: relative; z-index: 1; max-width: 650px; color: white; }
+    .booking-banner p { position: relative; z-index: 1; max-width: 580px; margin: 15px 0 24px; color: rgba(255,255,255,.85); }
+    .booking-banner .btn { position: relative; z-index: 1; }
+
+    /* FAQ */
+    .faq-wrap { max-width: 850px; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item summary {
+      position: relative;
+      padding: 22px 45px 22px 0;
+      color: var(--navy);
+      font-family: var(--font-heading);
+      font-size: 19px;
+      font-weight: 800;
+      list-style: none;
+      cursor: pointer;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      position: absolute;
+      top: 18px;
+      right: 5px;
+      color: var(--primary);
+      content: "+";
+      font-family: var(--font-body);
+      font-size: 27px;
+    }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item p { padding: 0 35px 22px 0; font-size: 16px; }
+
+    /* Footer */
+    .footer { padding: 65px 0 95px; background: #102F3D; color: white; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 35px; }
+    .footer .brand { color: white; }
+    .footer .brand small { color: rgba(255,255,255,.65); }
+    .footer p, .footer a { color: rgba(255,255,255,.72); font-size: 15px; }
+    .footer h3 { margin-bottom: 17px; color: white; font-size: 18px; }
+    .footer-links { display: grid; gap: 10px; }
+    .footer a:hover { color: white; }
+    .footer-about p { max-width: 270px; margin-top: 20px; }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 45px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.16);
+    }
+    .footer-bottom p { font-size: 14px; }
+
+    /* Mobile fixed actions */
+    .mobile-actions { display: none; }
+
+    @media (max-width: 1000px) {
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 14px; }
+      .nav-actions .btn { padding: 10px 14px; font-size: 15px; }
+      .hero-grid { gap: 35px; }
+      .hero-image { height: 440px; }
+      .feature-grid { gap: 40px; }
+      .service-card { grid-template-columns: 125px 1fr; }
+      .service-content { padding: 19px; }
+      .price-copy { padding: 35px; }
+      .price-cards { padding: 25px; }
+    }
+
+    @media (max-width: 760px) {
+      html { scroll-padding-top: 82px; }
+      .container { width: min(100% - 36px, var(--container)); }
+      .section { padding: 70px 0; }
+      .topbar-inner { justify-content: center; min-height: 38px; text-align: center; }
+      .topbar-inner p { font-size: 13px; }
+      .topbar .topbar-extra { display: none; }
+      .nav { min-height: 72px; }
+      .menu-toggle { display: block; }
+      .nav-actions { margin-left: auto; }
+      .nav-actions .btn { display: none; }
+      .nav-links {
+        position: absolute;
+        top: 72px;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 22px 20px;
+        border-bottom: 1px solid var(--border);
+        background: white;
+        box-shadow: 0 15px 25px rgba(23,59,77,.08);
+      }
+      .nav-links.open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 13px 0; border-bottom: 1px solid var(--border); font-size: 16px; }
+      .hero { padding: 48px 0 55px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 35px; }
+      .hero-copy { max-width: none; }
+      .hero-copy > p { font-size: 17px; }
+      .hero-image { height: 360px; border-radius: 25px 25px 75px 25px; }
+      .hero-floating { right: 8px; bottom: 15px; max-width: 220px; padding: 15px; }
+      .trust-grid { grid-template-columns: 1fr; gap: 16px; padding: 23px 0; }
+      .trust-item { justify-content: flex-start; }
+      .section-heading { margin-bottom: 30px; }
+      .services-grid { grid-template-columns: 1fr; gap: 16px; }
+      .service-card { grid-template-columns: 115px 1fr; min-height: 190px; }
+      .service-card img { min-height: 190px; }
+      .service-content { padding: 17px; }
+      .service-content h3 { font-size: 20px; }
+      .service-content p { font-size: 15px; }
+      .approach-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 13px; }
+      .approach-card { padding: 20px; }
+      .approach-card h3 { font-size: 19px; }
+      .approach-card p { font-size: 15px; }
+      .approach-icon { width: 50px; height: 50px; margin-bottom: 15px; }
+      .feature-grid { grid-template-columns: 1fr; gap: 30px; }
+      .feature-image { height: 330px; }
+      .price-panel { grid-template-columns: 1fr; }
+      .price-copy { padding: 30px 25px; }
+      .price-cards { padding: 20px; }
+      .price-card { padding: 17px; }
+      .price-card strong { font-size: 25px; }
+      .clinic-grid { grid-template-columns: 1fr; }
+      .clinic-card { display: grid; grid-template-columns: 125px 1fr; }
+      .clinic-card img { height: 100%; min-height: 225px; }
+      .clinic-content { padding: 18px; }
+      .clinic-content p { min-height: auto; }
+      .clinic-actions .btn { min-height: 42px; }
+      .team-intro { grid-template-columns: 1fr; gap: 14px; }
+      .team-grid { grid-template-columns: 1fr; }
+      .team-card { padding: 22px; }
+      .booking-banner { padding: 35px 25px; }
+      .footer { padding: 55px 0 110px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 22px; }
+      .footer-about { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; margin-top: 32px; }
+      .mobile-actions {
+        position: fixed;
+        z-index: 150;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 11px 15px calc(11px + env(safe-area-inset-bottom));
+        border-top: 1px solid var(--border);
+        background: rgba(255,255,255,.97);
+        box-shadow: 0 -8px 25px rgba(23,59,77,.10);
+        backdrop-filter: blur(12px);
+      }
+      .mobile-actions .btn { min-height: 48px; padding: 10px 12px; font-size: 15px; }
+      body { padding-bottom: 73px; }
+    }
+
+    @media (max-width: 390px) {
+      .container { width: calc(100% - 28px); }
+      .brand { font-size: 24px; }
+      .hero-image { height: 300px; }
+      .service-card { grid-template-columns: 100px 1fr; }
+      .service-content { padding: 14px; }
+      .service-content h3 { font-size: 18px; }
+      .price-cards { grid-template-columns: 1fr; }
+      .clinic-card { grid-template-columns: 105px 1fr; }
+      .clinic-content { padding: 14px; }
+      .clinic-actions { flex-direction: column; align-items: stretch; }
+      .clinic-actions .btn { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "1728 Dental Practice",
+    "url": "https://www.1728dental.com.sg/",
+    "description": "Affordable dental care in Singapore, including dental implants, wisdom tooth extraction, emergency dentistry and general dental care.",
+    "telephone": "+65 9631 1728",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "704 Ang Mo Kio Avenue 8, #01-2559",
+      "addressLocality": "Singapore",
+      "postalCode": "560704",
+      "addressCountry": "SG"
+    },
+    "department": [
+      {
+        "@type": "Dentist",
+        "name": "1728 Dental Jurong East",
+        "telephone": "+65 9770 1728",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "135 Jurong Gateway Road, #01-319",
+          "addressLocality": "Singapore",
+          "postalCode": "600135",
+          "addressCountry": "SG"
+        }
+      },
+      {
+        "@type": "Dentist",
+        "name": "1728 Dental Tampines East",
+        "telephone": "+65 9725 1728",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "201E Tampines Street 23, #01-60",
+          "addressLocality": "Singapore",
+          "postalCode": "527201",
+          "addressCountry": "SG"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <p>Affordable dental care, close to home.</p>
+      <p class="topbar-extra">Ang Mo Kio · Jurong East · Tampines East</p>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="1728 Dental Practice home">
+        1728<span>Dental</span>
+        <small>Dental Practice · Singapore</small>
+      </a>
+
+      <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+        <a href="#services">Our Services</a>
+        <a href="#approach">Why 1728</a>
+        <a href="#clinics">Our Clinics</a>
+        <a href="#team">Our Dentists</a>
+        <a href="#faq">FAQs</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn" href="https://clinic.platomedical.com/book/MTcyOGRlbnRhbA%3D%3D/bb47c575c4e64b39936346830514d1b4" target="_blank" rel="noopener">Book Appointment <span class="arrow">↗</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">1728 Dental Practice</span>
+          <h1>Better dental care.<br><span>Closer to you.</span></h1>
+          <p>From everyday dental check-ups to advanced treatments, discover accessible dental care with a team focused on your comfort and needs.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://clinic.platomedical.com/book/MTcyOGRlbnRhbA%3D%3D/bb47c575c4e64b39936346830514d1b4" target="_blank" rel="noopener">Book an Appointment <span class="arrow">↗</span></a>
+            <a class="btn btn-outline" href="#clinics">Find a Clinic</a>
+          </div>
+          <div class="hero-note">
+            <span class="check-mark">✓</span>
+            Three convenient clinic locations across Singapore
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img class="hero-image"
+            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85"
+            alt="Bright modern dental clinic with professional dental equipment"
+            fetchpriority="high">
+          <div class="hero-floating">
+            <strong>Care that fits your needs</strong>
+            <p>Explore treatment options and choose the clinic that works best for you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Practice highlights">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 7.8 7.5 9.5 4.3-1.7 7.5-5 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+          </span>
+          <div><strong>Patient-centred care</strong><span>Care guided by individual needs</span></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 21v-3h4v3"/></svg>
+          </span>
+          <div><strong>Three convenient clinics</strong><span>Ang Mo Kio, Jurong and Tampines</span></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+          </span>
+          <div><strong>Wide range of treatments</strong><span>From prevention to restorative care</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our expertise</span>
+          <h2>Dental care for every stage of your smile.</h2>
+          <p>Whether you need routine care or are exploring a specific treatment, start with the service that best matches your needs.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=700&q=80" alt="Dental professional preparing for an implant consultation" loading="lazy">
+            <div class="service-content">
+              <h3>Dental Implants</h3>
+              <p>Explore tooth replacement options designed to restore function and appearance.</p>
+              <a class="text-link" href="https://www.1728dental.com.sg/dental-implants/">Explore implants <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=700&q=80" alt="Dentist providing a patient consultation" loading="lazy">
+            <div class="service-content">
+              <h3>Wisdom Tooth Removal</h3>
+              <p>Get professional advice about discomfort, impacted wisdom teeth and removal.</p>
+              <a class="text-link" href="https://www.1728dental.com.sg/wisdom-tooth-extraction/">Learn about treatment <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa7fc?auto=format&fit=crop&w=700&q=80" alt="Dental instruments arranged in a clean treatment room" loading="lazy">
+            <div class="service-content">
+              <h3>Emergency & Surgery</h3>
+              <p>Find help for urgent dental concerns and discuss appropriate treatment options.</p>
+              <a class="text-link" href="https://www.1728dental.com.sg/emergency-surgery/">Explore emergency care <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=700&q=80" alt="Patient receiving a dental examination" loading="lazy">
+            <div class="service-content">
+              <h3>Everyday & Aesthetic Care</h3>
+              <p>Discover whitening, scaling, polishing, restorative care and more.</p>
+              <a class="text-link" href="https://www.1728dental.com.sg/">Explore dental services <span class="arrow">→</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top:30px">
+          <a class="text-link" href="https://www.1728dental.com.sg/">View all services <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="approach">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">The 1728 approach</span>
+          <h2>Care that starts with understanding you.</h2>
+          <p>A positive dental experience is about more than the treatment itself. It is about feeling informed, comfortable and supported.</p>
+        </div>
+
+        <div class="approach-grid">
+          <article class="approach-card">
+            <div class="approach-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11Z"/><path d="M8 12h2l1.2-2.5 2 5L14.5 12H17"/></svg>
+            </div>
+            <h3>Patient-first care</h3>
+            <p>Understand your concerns and discuss care options suited to your needs.</p>
+          </article>
+
+          <article class="approach-card">
+            <div class="approach-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5m0 14h16M7 15l4-4 3 2 5-6"/><path d="M16 7h3v3"/></svg>
+            </div>
+            <h3>Clear treatment guidance</h3>
+            <p>Get information to help you understand recommended treatments and next steps.</p>
+          </article>
+
+          <article class="approach-card">
+            <div class="approach-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4m8-4v4M3 9h18M8 13h3m-3 3h6"/></svg>
+            </div>
+            <h3>Convenient appointments</h3>
+            <p>Choose from three clinic locations and make an appointment online.</p>
+          </article>
+
+          <article class="approach-card">
+            <div class="approach-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 4 7v5c0 4.5 3.4 7.3 8 9 4.6-1.7 8-4.5 8-9V7l-8-4Z"/><path d="m8 12 2.5 2.5L16 9"/></svg>
+            </div>
+            <h3>Clinical confidence</h3>
+            <p>Meet a dental team with experience across a range of treatment needs.</p>
+          </article>
+
+          <article class="approach-card">
+            <div class="approach-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/><path d="M7 3 5 5m12-2 2 2"/></svg>
+            </div>
+            <h3>Modern technology</h3>
+            <p>Technology and digital imaging support assessment and treatment planning.</p>
+          </article>
+
+          <article class="approach-card">
+            <div class="approach-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/><path d="m8.5 8.5 7 7m0-7-7 7"/></svg>
+            </div>
+            <h3>Comprehensive services</h3>
+            <p>Access a broad range of general, restorative and specialist dental services.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container feature-grid">
+        <div>
+          <img class="feature-image" src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1000&q=85" alt="Modern dental clinic treatment room" loading="lazy">
+        </div>
+        <div class="feature-copy">
+          <span class="eyebrow">Your dental journey</span>
+          <h2>Know your options. Feel confident about your care.</h2>
+          <p>Every smile and every dental concern is different. A consultation helps your dentist understand your needs and explain the available treatment options.</p>
+          <ul class="feature-list">
+            <li><span class="check-mark">✓</span><span>Discuss your concerns and dental goals.</span></li>
+            <li><span class="check-mark">✓</span><span>Understand suitable treatment options.</span></li>
+            <li><span class="check-mark">✓</span><span>Review relevant costs and payment considerations.</span></li>
+            <li><span class="check-mark">✓</span><span>Plan your next steps with the dental team.</span></li>
+          </ul>
+          <a class="btn" href="https://clinic.platomedical.com/book/MTcyOGRlbnRhbA%3D%3D/bb47c575c4e64b39936346830514d1b4" target="_blank" rel="noopener">Arrange a Consultation <span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="price-panel">
+          <div class="price-copy">
+            <span class="eyebrow">Treatment information</span>
+            <h2>Explore treatment costs before you begin.</h2>
+            <p>1728 Dental publishes starting prices for selected procedures, along with information about applicable MediSave claims and terms. Speak with the clinic to understand your individual treatment plan and final fees.</p>
+            <p class="price-disclaimer">Published prices are subject to eligibility, clinical assessment and the clinic's current terms and conditions. Confirm all fees directly before treatment.</p>
+            <div style="margin-top:25px">
+              <a class="btn btn-white" href="https://www.1728dental.com.sg/dental-implants/">Explore Treatment Details <span class="arrow">↗</span></a>
+            </div>
+          </div>
+          <div class="price-cards">
+            <div class="price-card">
+              <span>Dental implants</span>
+              <strong>$2,644*</strong>
+              <small>Starting price, inclusive of GST as displayed on the current website.</small>
+            </div>
+            <div class="price-card">
+              <span>Wisdom tooth removal</span>
+              <strong>$218*</strong>
+              <small>Starting price, inclusive of GST as displayed on the current website.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="clinics">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Find us nearby</span>
+          <h2>Three clinics. One convenient choice.</h2>
+          <p>Choose the location that works best for you. Contact the clinic directly or arrange an appointment online.</p>
+        </div>
+
+        <div class="clinic-grid">
+          <article class="clinic-card">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=750&q=80" alt="Bright dental clinic interior" loading="lazy">
+            <div class="clinic-content">
+              <h3>Ang Mo Kio</h3>
+              <p>704 Ang Mo Kio Avenue 8, #01-2559, Singapore 560704</p>
+              <a class="clinic-phone" href="tel:+6596311728">+65 9631 1728</a>
+              <div class="clinic-actions">
+                <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=704+Ang+Mo+Kio+Avenue+8+%2301-2559+Singapore+560704" target="_blank" rel="noopener">Get Directions</a>
+                <a class="btn" href="https://clinic.platomedical.com/book/MTcyOGRlbnRhbA%3D%3D/bb47c575c4e64b39936346830514d1b4" target="_blank" rel="noopener">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="clinic-card">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=750&q=80" alt="Clean contemporary healthcare reception interior" loading="lazy">
+            <div class="clinic-content">
+              <h3>Jurong East</h3>
+              <p>135 Jurong Gateway Road, #01-319, Singapore 600135</p>
+              <a class="clinic-phone" href="tel:+6597701728">+65 9770 1728</a>
+              <div class="clinic-actions">
+                <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=135+Jurong+Gateway+Road+%2301-319+Singapore+600135" target="_blank" rel="noopener">Get Directions</a>
+                <a class="btn" href="https://clinic.platomedical.com/book/MTcyOGRlbnRhbA%3D%3D/bb47c575c4e64b39936346830514d1b4" target="_blank" rel="noopener">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="clinic-card">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=750&q=80" alt="Welcoming modern clinic interior" loading="lazy">
+            <div class="clinic-content">
+              <h3>Tampines East</h3>
+              <p>201E Tampines Street 23, #01-60, Singapore 527201</p>
+              <a class="clinic-phone" href="tel:+6597251728">+65 9725 1728</a>
+              <div class="clinic-actions">
+                <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=201E+Tampines+Street+23+%2301-60+Singapore+527201" target="_blank" rel="noopener">Get Directions</a>
+                <a class="btn" href="https://clinic.platomedical.com/book/MTcyOGRlbnRhbA%3D%3D/bb47c575c4e64b39936346830514d1b4" target="_blank" rel="noopener">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <div class="container">
+        <div class="team-intro">
+          <div>
+            <span class="eyebrow">Meet the team</span>
+            <h2>People who put your care first.</h2>
+          </div>
+          <p>Get to know some of the clinical leaders at 1728 Dental Practice. Explore the full dentist directory to learn more about the team.</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">AT</div>
+            <h3>Dr Aaron Tan</h3>
+            <span class="role">Group Clinical Director</span>
+            <p>Clinical interests include computerized dentistry, aesthetic dentistry, prosthodontics and implant dentistry.</p>
+          </article>
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">AH</div>
+            <h3>Dr Amanda He</h3>
+            <span class="role">Group Clinical Lead</span>
+            <p>Provides general dentistry and has a special interest in treating children.</p>
+          </article>
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">AL</div>
+            <h3>Dr Adrienne Lim</h3>
+            <span class="role">Clinical Lead</span>
+            <p>Clinical interests include aesthetic dentistry and oral surgery, with training in implantology.</p>
+          </article>
+        </div>
+
+        <div style="margin-top:28px">
+          <a class="text-link" href="https://www.1728dental.com.sg/surgeons/">Meet the full dental team <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Helpful information</span>
+          <h2>Questions before your visit?</h2>
+          <p>Here are a few useful starting points. Contact the clinic if you need advice about your individual situation.</p>
+        </div>
+
+        <div class="faq-wrap">
+          <details class="faq-item">
+            <summary>Where are 1728 Dental's clinics located?</summary>
+            <p>1728 Dental lists clinics in Ang Mo Kio, Jurong East and Tampines East. See the clinic section above for addresses and contact numbers.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How can I make an appointment?</summary>
+            <p>You can use the online appointment booking link or contact your preferred clinic by telephone.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What dental treatments are available?</summary>
+            <p>The published service range includes dental implants, wisdom tooth extraction, emergency and surgical care, root canal treatment, Invisalign Go, orthodontics and braces, dentures, teeth whitening and scaling and polishing.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use MediSave for dental treatment?</summary>
+            <p>Some eligible surgical procedures may qualify for MediSave claims, subject to current rules and eligibility. Ask the clinic to confirm whether your proposed procedure qualifies and what documentation is required.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How much will my dental treatment cost?</summary>
+            <p>Costs depend on your clinical needs and the treatment recommended. The clinic publishes starting prices for selected procedures. Request a consultation and confirm the full fees and applicable terms before proceeding.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="booking-banner">
+          <span class="eyebrow" style="color:#BDE8E7">Your next step</span>
+          <h2>Ready to take care of your smile?</h2>
+          <p>Choose a convenient 1728 Dental clinic and get in touch with the team to discuss your dental needs.</p>
+          <a class="btn btn-white" href="https://clinic.platomedical.com/book/MTcyOGRlbnRhbA%3D%3D/bb47c575c4e64b39936346830514d1b4" target="_blank" rel="noopener">Book an Appointment <span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="#">
+            1728<span>Dental</span>
+            <small>Dental Practice · Singapore</small>
+          </a>
+          <p>Affordable dental care, close to home. Explore dental services and find a convenient clinic in Singapore.</p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <div class="footer-links">
+            <a href="#services">Our Services</a>
+            <a href="#approach">Why 1728</a>
+            <a href="#team">Our Dentists</a>
+            <a href="#faq">FAQs</a>
+            <a href="https://www.1728dental.com.sg/contact-us/">Contact Us</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Our Clinics</h3>
+          <div class="footer-links">
+            <a href="#clinics">Ang Mo Kio</a>
+            <a href="#clinics">Jurong East</a>
+            <a href="#clinics">Tampines East</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Get in Touch</h3>
+          <div class="footer-links">
+            <a href="tel:+6596311728">Ang Mo Kio: +65 9631 1728</a>
+            <a href="tel:+6597701728">Jurong East: +65 9770 1728</a>
+            <a href="tel:+6597251728">Tampines: +65 9725 1728</a>
+            <a href="https://clinic.platomedical.com/book/MTcyOGRlbnRhbA%3D%3D/bb47c575c4e64b39936346830514d1b4" target="_blank" rel="noopener">Online Booking ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> 1728 Dental Practice. All rights reserved.</p>
+        <p>Affordable dental care, close to home.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-actions" aria-label="Quick appointment actions">
+    <a class="btn btn-outline" href="#clinics">Find a Clinic</a>
+    <a class="btn" href="https://clinic.platomedical.com/book/MTcyOGRlbnRhbA%3D%3D/bb47c575c4e64b39936346830514d1b4" target="_blank" rel="noopener">Book Now ↗</a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
